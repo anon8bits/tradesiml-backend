@@ -10,6 +10,7 @@ import CancelOrder from './cancelOrder.js';
 import ExecuteNow from './ExecuteNow.js';
 import Test from './Test.js';
 import AddMoney from './addMoney.js'
+import UpdateUserInfo from './editProfile.js'
 
 export default {
     '/api/order': orderRoute,
@@ -23,5 +24,6 @@ export default {
     '/api/cancelOrder': CancelOrder,
     '/api/executenow': ExecuteNow,
     '/api/test': Test,
-    '/api/addMoney' : AddMoney
+    '/api/addMoney' : AddMoney,
+    '/api/updateUserInfo': UpdateUserInfo
 };

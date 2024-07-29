@@ -6,7 +6,7 @@ const router = Router();
 router.get('/', checkJwt, extractEmail, async (req, res) => {
     try {
         const email = req.email;
-        const data = await User.findOne({email : email});
+        const data = await User.findOne({email : email}).select('-_id');
         if(!data) {
             res.status(404).json("User not found!")
         }
